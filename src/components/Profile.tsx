@@ -16,18 +16,18 @@ export default function Profile({ name, bio, imageUrl }: ProfileProps) {
           width={144}
           height={144}
           priority
-          className="h-36 w-36 rounded-full object-cover ring-4 ring-white shadow-md dark:ring-gray-800"
+          className="h-28 w-28 rounded-full object-cover shadow-lg shadow-orange-900/10 ring-4 ring-white/80 sm:h-36 sm:w-36 dark:ring-white/10"
         />
       ) : (
         <div
           aria-hidden
-          className="flex h-36 w-36 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-teal-600 text-5xl font-bold text-white ring-4 ring-white shadow-md dark:ring-gray-800"
+          className="flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 to-orange-400 text-4xl font-bold text-white shadow-lg shadow-orange-900/10 ring-4 ring-white/80 sm:h-36 sm:w-36 sm:text-5xl dark:ring-white/10"
         >
           {name.charAt(0)}
         </div>
       )}
-      <h1 className="mt-4 text-xl font-bold sm:text-2xl">{name}</h1>
-      <p className="mt-1 text-sm text-gray-600 sm:text-base dark:text-gray-400">
+      <h1 className="mt-5 text-2xl font-bold tracking-tight">{name}</h1>
+      <p className="mt-2 max-w-xs text-[15px] leading-relaxed text-stone-500 dark:text-stone-400">
         {bio}
       </p>
     </section>

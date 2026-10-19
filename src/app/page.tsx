@@ -1,11 +1,10 @@
 import LinkCard from "@/components/LinkCard";
 import Profile from "@/components/Profile";
 
-// TODO: 보여주기용 더미 값입니다. 실제 내용으로 교체하세요.
 const profile = {
-  name: "김클로",
-  bio: "세계 최강 바이브코더",
-  imageUrl: "/profile-dummy.svg",
+  name: "김개발",
+  bio: "풀스택 개발자 | 요즘에는 AI 개발에 관심이 많아요",
+  imageUrl: "https://placehold.co/144x144/orange/white/png",
 };
 
 const links = [
@@ -16,10 +15,10 @@ const links = [
 
 export default function Home() {
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-md flex-col px-4 py-12 sm:py-16">
+    <main className="mx-auto flex min-h-screen w-full max-w-md flex-col px-6 pb-16 pt-16 sm:px-8 sm:pt-24">
       <Profile name={profile.name} bio={profile.bio} imageUrl={profile.imageUrl} />
 
-      <ul className="mt-10 flex flex-col gap-5">
+      <ul className="mt-12 flex flex-col gap-4 sm:gap-5">
         {links.map((link) => (
           <li key={link.id}>
             <LinkCard title={link.title} url={link.url} />
